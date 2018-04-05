@@ -1,0 +1,62 @@
+3D Maze generator, By NanoH {Hoedus.net}
+
+Hi, and thank you for buying my 3D Maze generator. please read the few following instructions to make a better usage of this package.
+
+1 - Presentation.
+
+	This package contain a prefab named "3D Maze", who is a full customisable 3D maze generator.
+	By 3D, i mean that you can generate a maze with more than one floor. You can, for example, make a cubic maze of 10*10*10,
+	that is by the way the default configuration of the prefab.
+	The algorithm used for the generation is the "Kruskal's Algorithm".
+	
+	How to use it?
+	It is very simple: You have a prefab named "3D Maze" in the main folder of the package. Simply drag it in your scene, where you want the maze to spawn.
+	Set the differents options of the script attached to the prefab, and launch the scene. The maze will spawn instantly.
+	
+2 - Parameters.
+
+	Here are the parameters you can manipulate:
+		
+		- Horizontal wall / Vertical wall / floor / corner : You can create your own prefab for your walls and floors, who will be used for the generation.
+		You can also keep the default pieces and change de materials applicated on them (materials floor and wall)
+		
+		- NEW - Optimize corners: id this option is checked, the generation will not instantiate the corner pieces where there is two wall directly
+		connected and parralel
+		
+		- Width / depth / height : The dimensions of your maze. the height represents the number of floors
+		
+		- Wall Height: The height of a single floor
+		
+		- Floor Size: The side size of a single floor. IMPORTANT NOTE: The parts of your maze do not automatically fit with the two prior parameters.
+		for example, the height of your game objects "walls" have to be the same of the "Wall Heigth" parameter. Otherwise, you will have very strange mazes...
+		
+		- Roof: check this box if you want your maze to have a roof
+		
+		- Exits in floor: number of holes you want to have in your floors
+		
+		- Exits in walls: Number of holes you want to have in the external walls of your maze
+		
+		- Rand floor exits : if this box is checked, the holes in the floors will be placed at random. other wise, they will be placed at {0,0} and {max,max}
+		
+		- Rand walls exits : if this box is checked, the holes in the external walls will be placed at random. other wise, they will be placed at {0,0} and {max,max} in the horizontal walls
+		
+3 - Important notes:
+
+	In a single 3D maze, the different floors will inherit of the same parameters. If you want an easy way to have floors with different parameters, try to add a 3Dmaze with "Height" set to 1, "Roof" disabled,
+	and stack them one on each other.
+	
+	The file "maze_generation" contains two classes "Maze" and "Maze3d". You can use them in a script without using the instantiation script "maze generation",
+	so you can change the data after a procedural generation, to make exactly the maze you want.
+	
+	for any questions, You can contact me through "julien.sacrez@epitech.eu" or "http://Hoedus.net"
+	
+versions:
+
+	1.0: initial version
+	1.1:
+		- Mazes can now be generated in edit mode
+		- Corner generation can now be optimized (see the description above, section "2 - Parameters"
+		- The generator now places keys objects to help locate the maze's entrances and exits, and floor holes
+		- the sub objects are now placed as child objects
+
+
