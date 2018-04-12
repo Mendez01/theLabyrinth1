@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/LevelAssets/Decrepit Dungeon LITE/EXAMPLE/Demo_Scene.unity
+    guid: 14a2c64dbd956d346b9f674d144cc297
