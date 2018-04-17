@@ -107,6 +107,7 @@ public class NPCConnectedPatrols : MonoBehaviour {
             _previousWaypoint = _currentWaypoint;
             _currentWaypoint = nextWaypoint;
         }
+
         Vector3 targetVector = _currentWaypoint.transform.position;
         _navMeshAgent.SetDestination(targetVector);
         _traveling = true;
