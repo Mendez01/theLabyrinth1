@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Waypoint
-  - WaypointSkeleton
+  - PlayerWaypoint
+  - Skeleton_Waypoint
   layers:
   - Default
   - TransparentFX
