@@ -5,8 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Waypoint
+<<<<<<< HEAD
   - WaypointSkeleton
   - weapon
+=======
+  - PlayerWaypoint
+  - Skeleton_Waypoint
+  - Spider_Waypoint
+  - Minotaur_Waypoint
+  - Key
+>>>>>>> dfc12986a3748a333842c9e59f5b00f08b264f4d
   layers:
   - Default
   - TransparentFX

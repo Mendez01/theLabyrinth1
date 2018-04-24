@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LevelAssets/Decrepit Dungeon LITE/EXAMPLE/Demo_Scene.unity
-    guid: 14a2c64dbd956d346b9f674d144cc297
+    path: Assets/Prototype1.unity
+    guid: 1074946b7b140e54c98fb5dc0be24ef8
