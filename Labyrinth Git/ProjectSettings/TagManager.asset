@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Waypoint
   - WaypointSkeleton
+  - weapon
   layers:
   - Default
   - TransparentFX
