@@ -2273,8 +2273,11 @@ MonoBehaviour:
   _patrolWaiting: 0
   _totalWaitTime: 3
   _switchProbability: 0.2
+  Waypoint_Tag: 
   player: {fileID: 0}
   head: {fileID: 4768427616549616}
+  _dead: 0
+  SpawnOnDeadItem: {fileID: 0}
 --- !u!137 &137557035088386964
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

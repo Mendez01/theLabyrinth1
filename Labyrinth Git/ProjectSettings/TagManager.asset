@@ -7,6 +7,9 @@ TagManager:
   - Waypoint
   - PlayerWaypoint
   - Skeleton_Waypoint
+  - Spider_Waypoint
+  - Minotaur_Waypoint
+  - Key
   layers:
   - Default
   - TransparentFX
