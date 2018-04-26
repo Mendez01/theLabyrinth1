@@ -565,7 +565,8 @@ Prefab:
         type: 2}
       propertyPath: SpawnOnDeadItems.Array.data[2]
       value: 
-      objectReference: {fileID: 853859645}
+      objectReference: {fileID: 1750474132082820, guid: 228a7e58083db9042bb98aa308654194,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77656ff6e077abf4fb06c592fcd3d468, type: 2}
   m_IsPrefabParent: 0
@@ -6204,6 +6205,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53fe99be0e5558f4da22eb36745de498, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1430208348 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1433120081691968, guid: 53fe99be0e5558f4da22eb36745de498,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430208347}
+--- !u!65 &1430208349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430208348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 0.6}
+  m_Center: {x: 0, y: 0.25, z: 0.3}
 --- !u!1 &1433701692 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1701038705308332, guid: 48a582a2276cd4e49a49968721d27ee9,
