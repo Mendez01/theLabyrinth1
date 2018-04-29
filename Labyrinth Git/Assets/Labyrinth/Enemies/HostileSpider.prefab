@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 195970751485037176}
   m_Layer: 0
   m_Name: HostileSpider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2128,7 +2128,11 @@ MonoBehaviour:
   player: {fileID: 0}
   head: {fileID: 4079632428406126}
   _dead: 0
-  SpawnOnDeadItems: []
+  SpawnOnDeadItems:
+  - {fileID: 1750474132082820, guid: 228a7e58083db9042bb98aa308654194, type: 2}
+  - {fileID: 1217577741362550, guid: 105da9ba5feb4f84a9e6f0dc534d2cec, type: 2}
+  Weapons_Damage_Area: {fileID: 1295950461672892}
+  player_nearby: 0
 --- !u!137 &137014868956034736
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

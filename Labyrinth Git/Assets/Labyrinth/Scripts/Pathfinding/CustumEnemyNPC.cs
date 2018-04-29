@@ -35,9 +35,24 @@ public class CustumEnemyNPC : MonoBehaviour {
 
     // for other stuff
 
+    // to spawn items
+
     public bool _dead = false;
 
     public GameObject[] SpawnOnDeadItems;
+
+    // for attacking script 
+    // gets the item for the collider
+
+    public GameObject Weapons_Damage_Area;
+
+    private Collider enemy_attack_collider;
+
+    private bool is_collider_on;
+
+    // for sound manager script
+
+    public bool player_nearby;
 
     private Animator anim;
 
@@ -52,8 +67,21 @@ public class CustumEnemyNPC : MonoBehaviour {
 
     private float count;
 
+    // private AudioSource battle_theme;
+
+    // private bool music_playing;
+
     public void Start()
     {
+        // battle_theme = GetComponent<AudioSource>();
+
+        is_collider_on = false;
+
+        // get the collider 
+        enemy_attack_collider = Weapons_Damage_Area.GetComponent<Collider>();
+
+        // turn the collider off
+        enemy_attack_collider.enabled = !enemy_attack_collider.enabled;
 
         anim = this.GetComponent<Animator>();
 
@@ -104,10 +132,24 @@ public class CustumEnemyNPC : MonoBehaviour {
         // if we found the player 
         // follow the player 
 
-        Debug.Log("Distance: " + Vector3.Distance(player.position, this.transform.position));
+        // Debug.Log("Distance: " + Vector3.Distance(player.position, this.transform.position));
 
         RaycastHit hit;
 
+        /*
+        if ((player_nearby) && (music_playing == false))
+        {
+            battle_theme.Play();
+            music_playing = true;
+        }
+
+        else if ((!player_nearby) && (music_playing == true)){
+
+            // shut it off
+            battle_theme.Stop();
+            music_playing = false;
+        }
+        */
         if (health == 0)
         {
             _dead = true;
@@ -143,6 +185,8 @@ public class CustumEnemyNPC : MonoBehaviour {
         {
             Debug.Log("Player Nearby");
 
+            player_nearby = true;
+
             _patrolWaiting = false;
             _traveling = false;
             is_persuing = true;
@@ -158,33 +202,63 @@ public class CustumEnemyNPC : MonoBehaviour {
 
             ConnectedWaypoint new_Waypoint = player_waypoint.GetComponent<ConnectedWaypoint>();
 
+            /*
+             
             _currentWaypoint = new_Waypoint;
 
             SetPersue();
 
+            */
             //this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotSpeed * Time.deltaTime);
 
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 3 * Time.deltaTime);
 
-            if ((direction.magnitude > 2) && _dead == false)
+            if ((direction.magnitude > 3) && _dead == false)
             {
                 // too far to attack 
+
+                // follow 
+
+                _currentWaypoint = new_Waypoint;
+
+                SetPersue();
 
                 // this.transform.Translate(0, 0, Time.deltaTime * speed);
                 anim.SetBool("isWalking", true);
                 anim.SetBool("isAttacking", false);
 
+                if (is_collider_on == false)
+                {
+                    enemy_attack_collider.enabled = !enemy_attack_collider.enabled;
+                }
+
+
             }
-            else if ((direction.magnitude < 2) && _dead == false)
+            else if ((direction.magnitude < 3) && _dead == false)
             {
                 // within attacking range
 
                 anim.SetBool("isAttacking", true);
+
+                // turn on the attack collider
+                // turn the collider on
+                if (is_collider_on == false)
+                {
+                    enemy_attack_collider.enabled = !enemy_attack_collider.enabled;
+                }
+
                 anim.SetBool("isWalking", false);
+
+                _currentWaypoint = null;
+
+                SetPersue();
             }
         }
         else if (((Vector3.Distance(player.position, this.transform.position) > 15)) && _dead == false)
         {
+            // player is far away
+            player_nearby = false;
+
             anim.SetBool("isWalking", true);
             anim.SetBool("isAttacking", false);
             is_persuing = false;
@@ -193,7 +267,10 @@ public class CustumEnemyNPC : MonoBehaviour {
             // normal patrol speed
             _navMeshAgent.speed = 3.5f;
 
-            
+            if (is_collider_on == true)
+            {
+                enemy_attack_collider.enabled = !enemy_attack_collider.enabled;
+            }
 
             // if you have not found the player
             // if you don't already have a set destination 
@@ -248,9 +325,6 @@ public class CustumEnemyNPC : MonoBehaviour {
                 }
             }
 
-            
-
-
             /*
             GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("Waypoint");
 
@@ -266,9 +340,6 @@ public class CustumEnemyNPC : MonoBehaviour {
             SetDestination();
             */
         }
-        
-        
-
     }
 
     private void SetDestination()

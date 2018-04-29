@@ -9,9 +9,23 @@ public class keyZone : MonoBehaviour {
 
     public Text Instructions;
 
-    private void Start()
+    public bool play_audio;
+
+    AudioSource Open_Sound;
+
+    void Start()
     {
-        AudioSource Open_Sound = GetComponent<AudioSource>();
+        Open_Sound = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        if(play_audio == true)
+        {
+            
+
+            play_audio = false;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -34,14 +48,13 @@ public class keyZone : MonoBehaviour {
                     Trap_Collider.GetComponent<gateTrapScript>().Open();
                     Trap_Collider.GetComponent<gateTrapScript>().gate_open = true;
 
-                    AudioSource audio = GetComponent<AudioSource>();
 
-                    if (audio != null)
-                    {
-                        audio.Play();
-                    }
-                  
+
+                    play_audio = true;
+                    Open_Sound.Play();
+
                     Debug.Log("Entered");
+                    Debug.Log(Open_Sound);
 
                     /*
                     if (Open_Sound != null)
