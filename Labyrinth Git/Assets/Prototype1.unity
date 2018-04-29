@@ -121,8 +121,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 59004993}
+  - component: {fileID: 59004994}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AudioListiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,6 +142,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &59004994
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59004992}
+  m_Enabled: 1
 --- !u!4 &90087172 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4222364219158140, guid: ca5d104dfb8e59f4b88d75a45646d2c2,
@@ -1287,7 +1295,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e79c14bfa6bc7aa458d39a865d58f69d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

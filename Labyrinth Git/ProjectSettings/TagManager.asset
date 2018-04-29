@@ -12,6 +12,7 @@ TagManager:
   - PlayerWaypoint
   - Key
   - Spider_Collider
+  - Enemy
   layers:
   - Default
   - TransparentFX

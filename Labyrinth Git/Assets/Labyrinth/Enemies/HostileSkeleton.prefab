@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 114766945583070214}
   m_Layer: 0
   m_Name: HostileSkeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,11 +2273,17 @@ MonoBehaviour:
   _patrolWaiting: 0
   _totalWaitTime: 3
   _switchProbability: 0.2
-  Waypoint_Tag: 
+  health: 100
+  Waypoint_Tag: Skeleton_Waypoint
   player: {fileID: 0}
   head: {fileID: 4768427616549616}
   _dead: 0
-  SpawnOnDeadItem: {fileID: 0}
+  SpawnOnDeadItems:
+  - {fileID: 0}
+  - {fileID: 1217577741362550, guid: 105da9ba5feb4f84a9e6f0dc534d2cec, type: 2}
+  - {fileID: 1750474132082820, guid: 228a7e58083db9042bb98aa308654194, type: 2}
+  Weapons_Damage_Area: {fileID: 1895115153841562}
+  player_nearby: 0
 --- !u!137 &137557035088386964
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 114648676050493448}
   m_Layer: 0
   m_Name: HostileMinotaur
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2108,9 +2108,14 @@ MonoBehaviour:
   _patrolWaiting: 0
   _totalWaitTime: 3
   _switchProbability: 0.2
+  health: 100
   Waypoint_Tag: Minotaur_Waypoint
   player: {fileID: 0}
   head: {fileID: 0}
+  _dead: 0
+  SpawnOnDeadItems: []
+  Weapons_Damage_Area: {fileID: 0}
+  player_nearby: 0
 --- !u!137 &137232434319402186
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
