@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 95474286241920866}
   - component: {fileID: 114802508348825584}
   - component: {fileID: 195970751485037176}
+  - component: {fileID: 65358165709572138}
   m_Layer: 0
   m_Name: HostileSpider
   m_TagString: Enemy
@@ -266,7 +267,7 @@ GameObject:
   - component: {fileID: 65089312253252450}
   m_Layer: 0
   m_Name: Spider01
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2092,6 +2093,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6618131, y: 1.7418643, z: 0.7328069}
   m_Center: {x: 0.0007219913, y: 0.27934682, z: 0.3812717}
+--- !u!65 &65358165709572138
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062463293752322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.0409079, z: 1}
+  m_Center: {x: 0, y: 0.52045393, z: 0}
 --- !u!95 &95474286241920866
 Animator:
   serializedVersion: 3
@@ -2115,7 +2128,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062463293752322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c96a0f2c3d2d24eb0d712d04404f66, type: 3}
   m_Name: 

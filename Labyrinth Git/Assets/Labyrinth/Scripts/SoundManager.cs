@@ -86,10 +86,7 @@ public class SoundManager : MonoBehaviour {
                 
             }
 
-            if (false_count > 1)
-            {
 
-            }
 
             // if there is an enemy nearby play the intense music
 
