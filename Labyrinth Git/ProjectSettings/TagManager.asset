@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+  - Key
+=======
   - Waypoint
   - weapon
   - Skeleton_Waypoint
@@ -12,7 +15,11 @@ TagManager:
   - PlayerWaypoint
   - Key
   - Spider_Collider
+<<<<<<< HEAD
   - Enemy
+=======
+>>>>>>> e3fd966e3f6780425bfbd7a85ec633a914a1bf52
+>>>>>>> 60c5f86cb30fa5f73894b772ffd4fbd2ef352ccf
   layers:
   - Default
   - TransparentFX
@@ -25,6 +32,8 @@ TagManager:
   - Player
   - Enemy
   - Item
+<<<<<<< HEAD
+=======
   - DeadEnemy
   - Player
   - Enemy
@@ -45,7 +54,28 @@ TagManager:
   - Player
   - Enemy
   - Item
+>>>>>>> e3fd966e3f6780425bfbd7a85ec633a914a1bf52
   - DeadEnemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
