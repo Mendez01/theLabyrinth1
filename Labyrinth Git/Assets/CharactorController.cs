@@ -6,6 +6,7 @@ public class CharactorController : MonoBehaviour {
 	[System.Serializable]
 	public class MoveSettings
 	{
+		public float MaxHP = 100;
 		public float forwardVel = 10;
 		public float runVel = 15;
 		public float rotateVel = 100;
