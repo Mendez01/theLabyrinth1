@@ -67,11 +67,12 @@ public class CharactorController : MonoBehaviour {
 		Walk ();
 		rBody.velocity = transform.TransformDirection (velocity);
 		if (Input.GetKeyDown ("e")) {
-			anim.SetFloat ("Blend", forwardInput + runInput + 3);
+			anim.SetBool ("IsAttacking", true);
 			audio.Play ();
 			weap.enabled = true;
 		}
 		if (Input.GetKeyUp ("e")) {
+			anim.SetBool ("IsAttacking", false);
 			audio.Stop ();
 		}
 	}

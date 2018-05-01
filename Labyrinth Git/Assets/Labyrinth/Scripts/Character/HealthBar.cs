@@ -69,7 +69,7 @@ public class HealthBar : MonoBehaviour {
 		if (hp <= 0) {
 			hp = 0;
 			//Destroy(anim.gameObject);
-			anim.SetFloat ("Blend", -4);
+			anim.SetBool ("IsDead", true);
 		}
 	}
 
