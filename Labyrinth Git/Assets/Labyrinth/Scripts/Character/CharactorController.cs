@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CharactorController : MonoBehaviour {
 	public float HP = 100f;
+	public BoxCollider weap;
 	[System.Serializable]
 	public class MoveSettings
 	{
 		public float forwardVel = 10;
 		public float runVel = 15;
-		public float rotateVel = 150;
+		public float rotateVel = 300;
 	}
 
 	[System.Serializable]
@@ -36,6 +37,7 @@ public class CharactorController : MonoBehaviour {
 	Quaternion targetRotation;
 	Rigidbody rBody;
 	Animator anim;
+	AudioSource audio;
 	float forwardInput, turnInput, runInput;
 
 	public Quaternion TargetRotation
@@ -44,10 +46,11 @@ public class CharactorController : MonoBehaviour {
 	}
 		
 	// Use this for initialization
-	void Start () {
+	void Start () { 
 		anim = GetComponent<Animator> ();
 		targetRotation = transform.rotation;
 		rBody = GetComponent<Rigidbody> ();
+		audio = GetComponent<AudioSource> ();
 		forwardInput = turnInput = 0;
 	}
 
@@ -64,10 +67,12 @@ public class CharactorController : MonoBehaviour {
 		Walk ();
 		rBody.velocity = transform.TransformDirection (velocity);
 		if (Input.GetKeyDown ("e")) {
-			anim.SetFloat ("Blend", 3);
+			anim.SetFloat ("Blend", forwardInput + runInput + 3);
+			audio.Play ();
+			weap.enabled = true;
 		}
-		if (Input.GetKeyDown ("f")) {
-			anim.Play ("Dance");
+		if (Input.GetKeyUp ("e")) {
+			audio.Stop ();
 		}
 	}
 
@@ -91,7 +96,7 @@ public class CharactorController : MonoBehaviour {
 			} else {
 				velocity.z = forwardInput * moveSetting.runVel;
 
-				anim.SetFloat ("Blend", forwardInput + 1);
+				anim.SetFloat ("Blend", forwardInput + runInput);
 				}
 			}
 		 else {

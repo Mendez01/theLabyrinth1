@@ -393,11 +393,11 @@ public class CustumEnemyNPC : MonoBehaviour {
         }
         
     }
-	private void OnTrrigerEnter(Collider col)
+	private void OnTriggerEnter(Collider col)
 	{
 		if (col.tag == "weapon") {
-			float damage = 100;
-			health -= damage;
+			health -= 40;
+			col.enabled = false;
 		}
 
 
