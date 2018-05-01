@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4368384, g: 0.47552568, b: 0.51626194, a: 1}
+  m_IndirectSpecularColor: {r: 0.4368381, g: 0.47552443, b: 0.5162613, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &54025006 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1416786175380194, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -629,6 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &160209083 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1883069362800834, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -751,6 +753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &212647625 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1009260463454742, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -2822,6 +2825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &274946708 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1507409994248314, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -2944,6 +2948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &323746984 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1352864269975992, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -3126,6 +3131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &366283162 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1861790871477606, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -3377,6 +3383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &461765937 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1704636278470684, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -3459,6 +3466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &478442858 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1667170327932474, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -3541,6 +3549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &504767947 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1249064422875428, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -3663,6 +3672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &529987869 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1694709577342108, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -4147,6 +4157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &692246174
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &694095429 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1335460160648856, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -4452,6 +4464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &792379260 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1380303435052936, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -4590,6 +4603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &834582143 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1352638085361904, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -4652,6 +4666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &853859645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,6 +4849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &894244611 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1643052921724826, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -5175,6 +5191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1020933701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,6 +5270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1036445335 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1116213826016054, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -6212,6 +6230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1401085151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6547,6 +6566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1465138816 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1035602791213114, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -6609,6 +6629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1477344384 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1818795781393912, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -6811,6 +6832,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
+--- !u!1 &1574512720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1574512722}
+  - component: {fileID: 1574512721}
+  m_Layer: 0
+  m_Name: AudioListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1574512721
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574512720}
+  m_Enabled: 1
+--- !u!4 &1574512722
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574512720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 82.69074, y: 9.862305, z: 36.279724}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1575072293
 GameObject:
   m_ObjectHideFlags: 0
@@ -6853,6 +6911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1588462415 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1325953653131548, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -7029,6 +7088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1680538257 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1269853478079606, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -7627,6 +7687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
   _connectivityRadius: 50
+  Waypoint_Tag: 
 --- !u!1 &1818559788
 GameObject:
   m_ObjectHideFlags: 0

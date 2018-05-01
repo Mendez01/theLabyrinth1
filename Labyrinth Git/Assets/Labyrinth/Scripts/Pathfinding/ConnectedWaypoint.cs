@@ -7,12 +7,15 @@ public class ConnectedWaypoint : Waypoint {
     [SerializeField]
     protected float _connectivityRadius = 50f;
 
+    // Name of waypoints you want to find 
+    public string Waypoint_Tag;
+
     List<ConnectedWaypoint> _connections;
 
     public void Start()
     {
         // Grab all waypoint objects in scene.
-        GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag(Waypoint_Tag);
 
         // Create a list of waypoints I can refer to later.
         _connections = new List<ConnectedWaypoint>();

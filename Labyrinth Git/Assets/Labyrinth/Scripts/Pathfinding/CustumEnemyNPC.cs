@@ -275,6 +275,7 @@ public class CustumEnemyNPC : MonoBehaviour {
             // if you have not found the player
             // if you don't already have a set destination 
 
+            /*
 
             while (_currentWaypoint == null)
             {
@@ -289,6 +290,7 @@ public class CustumEnemyNPC : MonoBehaviour {
 
                 SetDestination();
             }
+            */
 
             // check if we're close to the destination.
             if ((_traveling && _navMeshAgent.remainingDistance <= 1.0f) && _dead == false)

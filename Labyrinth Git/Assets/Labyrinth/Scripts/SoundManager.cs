@@ -70,13 +70,11 @@ public class SoundManager : MonoBehaviour {
             // we have a list now so go through the bool list to see if there is 
             // any that are true 
 
-            int false_count;
-
             for (int i = 0; i < is_nearby_enemies_array.Length; i++)
             {
                 
                 // if one of them are nearby 
-                if (is_nearby_enemies_array[i] == false)
+                if (is_nearby_enemies_array[i] == true)
                 {
                     // Debug.Log(is_nearby_enemies_array[i]);
 
