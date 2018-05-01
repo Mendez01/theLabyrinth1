@@ -14,6 +14,11 @@ TagManager:
   - Spider_Waypoint
   - PlayerWaypoint
   - Heal
+  - Waypoint
+  - Black_Spider_Waypoint
+  - Skeleton_Waypoint_2
+  - Spider_Waypoint_2
+  - Spider_Waypoint_3
   layers:
   - Default
   - TransparentFX
