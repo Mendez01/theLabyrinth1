@@ -40,9 +40,10 @@ GameObject:
   - component: {fileID: 23122742439915842}
   - component: {fileID: 65289667524001122}
   - component: {fileID: 54170041463167520}
+  - component: {fileID: 65376648239558348}
   m_Layer: 0
   m_Name: Small_Potion 1
-  m_TagString: Untagged
+  m_TagString: Heal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +173,18 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65289667524001122
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750474132082820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6629231, y: 2.8431203, z: 1.5815339}
+  m_Center: {x: 0.0000002682209, y: -1.3439244, z: 0}
+--- !u!65 &65376648239558348
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

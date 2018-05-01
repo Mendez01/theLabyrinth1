@@ -9,17 +9,18 @@ public class HealthBar : MonoBehaviour {
 	public float keys = 0;
 	private float hp = 100f;
 	private float Maxhp = 100f;
-	Animation anim;
+	public Animator anim;
 	public float damage1 = 6;
 	public float damage2 = 10;
 	public float damage3 = 30;
 	public float heal = 10;
 
+
 	private void Start ()
 	{
 		UpdateHealthBar();
 		UpdateKeys ();
-		anim = GetComponent<Animation> ();
+		anim = GetComponent<Animator> ();
 
 
 	}
@@ -66,7 +67,8 @@ public class HealthBar : MonoBehaviour {
 		hp -= damage;
 		if (hp <= 0) {
 			hp = 0;
-			anim.Play ("die");
+			//Destroy(anim.gameObject);
+			anim.SetFloat ("Blend", -2);
 		}
 	}
 

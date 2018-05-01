@@ -9,10 +9,7 @@ public class CharactorController : MonoBehaviour {
 	{
 		public float forwardVel = 10;
 		public float runVel = 15;
-		public float rotateVel = 100;
-		public float jumpVel = 100;
-		public float distToGrounded = 27.0f;
-		public LayerMask ground;
+		public float rotateVel = 150;
 	}
 
 	[System.Serializable]
@@ -27,7 +24,6 @@ public class CharactorController : MonoBehaviour {
 		public float inputDelay = 0.1f;
 		public string FORWARD_AXIS = "Vertical";
 		public string TURN_AXIS = "Horizontal";
-		public string JUMP_AXIS = "Jump";
 		public string RUN_AXIS = "Fire3";
 	}
 
@@ -39,20 +35,17 @@ public class CharactorController : MonoBehaviour {
 	Vector3 velocity = Vector3.zero;
 	Quaternion targetRotation;
 	Rigidbody rBody;
-	Animation anim;
-	float forwardInput, turnInput, jumpInput, runInput;
+	Animator anim;
+	float forwardInput, turnInput, runInput;
 
 	public Quaternion TargetRotation
 	{
 		get{return targetRotation;}
 	}
-
-	bool Grounded(){
-		return Physics.Raycast (transform.position, Vector3.down, moveSetting.distToGrounded, moveSetting.ground);
-	}
+		
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animation> ();
+		anim = GetComponent<Animator> ();
 		targetRotation = transform.rotation;
 		rBody = GetComponent<Rigidbody> ();
 		forwardInput = turnInput = 0;
@@ -61,7 +54,6 @@ public class CharactorController : MonoBehaviour {
 	void GetInput(){
 		forwardInput = Input.GetAxis (inputSetting.FORWARD_AXIS);
 		turnInput = Input.GetAxis (inputSetting.TURN_AXIS);
-		jumpInput = Input.GetAxisRaw (inputSetting.JUMP_AXIS);
 		runInput = Input.GetAxisRaw (inputSetting.RUN_AXIS);
 	}
 
@@ -70,10 +62,9 @@ public class CharactorController : MonoBehaviour {
 		GetInput ();
 		Turn ();
 		Walk ();
-		Jump ();
 		rBody.velocity = transform.TransformDirection (velocity);
 		if (Input.GetKeyDown ("e")) {
-			anim.Play ("attack");
+			anim.SetFloat ("Blend", 3);
 		}
 		if (Input.GetKeyDown ("f")) {
 			anim.Play ("Dance");
@@ -84,22 +75,26 @@ public class CharactorController : MonoBehaviour {
 	//		Walk ();
 	//	}
 
+//	private void Move ()
+//	{
+//		v = Mathf.Lerp (v, m_MovementInputValue, Time.deltaTime);
+//		//   transform.Translate (Vector3.forward * v * Time.deltaTime * m_Speed);
+//		anim.SetFloat ("Blend", v);
+//	}
+
 	void Walk(){
 		if (Mathf.Abs (forwardInput) > inputSetting.inputDelay) {
 			if (runInput == 0) {
 				velocity.z = forwardInput * moveSetting.forwardVel;
-				if (anim.IsPlaying ("Jump")) {
-				} else {
-					anim.Play ("walk");
-				}
+				anim.SetFloat ("Blend", forwardInput);
+
 			} else {
 				velocity.z = forwardInput * moveSetting.runVel;
-				if (anim.IsPlaying ("Jump")) {
-				} else {
-					anim.Play ("run");
+
+				anim.SetFloat ("Blend", forwardInput + 1);
 				}
 			}
-		} else {
+		 else {
 			velocity.z = 0;
 		}
 	}
@@ -111,16 +106,5 @@ public class CharactorController : MonoBehaviour {
 		transform.rotation = targetRotation;
 	}
 
-	void Jump(){
-		if (jumpInput > 0 && Grounded ()) {
-			//jump
-			velocity.y = moveSetting.jumpVel;
-			anim.Play ("Jump");
-		} else if (jumpInput == 0 && Grounded ()) {
-			//
-			velocity.y = 0;
-		} else {
-			velocity.y -= physSetting.downAccel;
-		}
-	}
+
 }
