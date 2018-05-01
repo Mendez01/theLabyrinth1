@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4368381, g: 0.47552443, b: 0.5162613, a: 1}
+  m_IndirectSpecularColor: {r: 0.4368384, g: 0.47552568, b: 0.51626194, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3337,7 +3337,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1987232180}
+      objectReference: {fileID: 2014469727}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43856d9b2b445af408dce41559c6983e, type: 2}
   m_IsPrefabParent: 0
@@ -5132,20 +5132,21 @@ Prefab:
       propertyPath: keyText
       value: 
       objectReference: {fileID: 933767268}
-    - target: {fileID: 4400415266668384, guid: a3351a3d48fc442beb898f7ae1690878, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.141
-      objectReference: {fileID: 0}
-    - target: {fileID: 65474088751989724, guid: a3351a3d48fc442beb898f7ae1690878,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114863091458501596, guid: a3351a3d48fc442beb898f7ae1690878,
         type: 2}
       propertyPath: damage1
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114863091458501596, guid: a3351a3d48fc442beb898f7ae1690878,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1484658293}
+    - target: {fileID: 114863091458501596, guid: a3351a3d48fc442beb898f7ae1690878,
+        type: 2}
+      propertyPath: cc
+      value: 
+      objectReference: {fileID: 1484658298}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3351a3d48fc442beb898f7ae1690878, type: 2}
   m_IsPrefabParent: 0
@@ -5476,47 +5477,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!1 &1116587062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1116587063}
-  - component: {fileID: 1116587064}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Weapon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1116587063
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1116587062}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.281, z: 0.204}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2014469727}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1116587064
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1116587062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.40812382, y: 0.26347515, z: 0.29937288}
-  m_Center: {x: -0.03516085, y: -0.09992522, z: -0.030194867}
 --- !u!1 &1124620709 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1769604654181526, guid: 48a582a2276cd4e49a49968721d27ee9,
@@ -5652,10 +5612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0633e2c1c2bdd45f9ab16c6d24045d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cc: {fileID: 0}
   currentHealthbar: {fileID: 1435747396}
   keyText: {fileID: 933767268}
   keys: 10
-  anim: {fileID: 0}
   damage1: 6
   damage2: 10
   damage3: 30
@@ -6403,7 +6363,7 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1987232180}
+      objectReference: {fileID: 2014469727}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53fe99be0e5558f4da22eb36745de498, type: 2}
   m_IsPrefabParent: 0
@@ -6710,6 +6670,17 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!95 &1484658293 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95152606446455678, guid: a3351a3d48fc442beb898f7ae1690878,
+    type: 2}
+  m_PrefabInternal: {fileID: 997351620}
+--- !u!114 &1484658298 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114208758827824712, guid: a3351a3d48fc442beb898f7ae1690878,
+    type: 2}
+  m_PrefabInternal: {fileID: 997351620}
+  m_Script: {fileID: 11500000, guid: 11faca87a0b4e4db9b10fe0b9fd684ab, type: 3}
 --- !u!1 &1535976721 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1202904007592064, guid: 48a582a2276cd4e49a49968721d27ee9,

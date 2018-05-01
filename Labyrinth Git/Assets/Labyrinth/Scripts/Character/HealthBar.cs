@@ -4,12 +4,13 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour {
+	public Component cc;
 	public Image currentHealthbar;
 	public Text keyText;
 	public float keys = 0;
 	private float hp = 100f;
 	private float Maxhp = 100f;
-	public Animator anim;
+	Animator anim;
 	public float damage1 = 6;
 	public float damage2 = 10;
 	public float damage3 = 30;
@@ -68,7 +69,7 @@ public class HealthBar : MonoBehaviour {
 		if (hp <= 0) {
 			hp = 0;
 			//Destroy(anim.gameObject);
-			anim.SetFloat ("Blend", -2);
+			anim.SetFloat ("Blend", -4);
 		}
 	}
 
