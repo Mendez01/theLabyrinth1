@@ -13,8 +13,8 @@ public class HealthBar : MonoBehaviour {
 	Animator anim;
 	public float damage1 = 6;
 	public float damage2 = 10;
-	public float damage3 = 30;
-	public float heal = 10;
+	public float damage3 = 5;
+	public float heal = 30;
 
 
 	private void Start ()
@@ -50,9 +50,11 @@ public class HealthBar : MonoBehaviour {
 		if (col.tag == "Weapon2") {
 			TakeDamage(damage2);
 		}
+        
 		if (col.tag == "Weapon3") {
 			TakeDamage(damage3);
 		}
+        
 		if (col.tag == "Heal") {
 			Destroy (col.gameObject);
 			HealDamage (heal);
@@ -63,7 +65,17 @@ public class HealthBar : MonoBehaviour {
 		}
 
 	}
-	private void TakeDamage (float damage)
+
+    /*
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Weapon3")
+        {
+            TakeDamage(damage3);
+        }
+    }
+    */
+    private void TakeDamage (float damage)
 	{
 		hp -= damage;
 		if (hp <= 0) {

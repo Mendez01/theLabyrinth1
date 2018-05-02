@@ -19,6 +19,8 @@ TagManager:
   - Skeleton_Waypoint_2
   - Spider_Waypoint_2
   - Spider_Waypoint_3
+  - MysteryLight
+  - Weapon3
   layers:
   - Default
   - TransparentFX

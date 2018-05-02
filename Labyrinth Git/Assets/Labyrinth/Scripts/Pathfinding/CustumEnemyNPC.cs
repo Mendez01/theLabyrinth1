@@ -26,11 +26,14 @@ public class CustumEnemyNPC : MonoBehaviour {
 
     public float health = 100f;
 
+    public float perusing_speed = 4f;
+
     // Name of waypoints you want to find 
     public string Waypoint_Tag;
 
     // to find player 
-    public Transform player;
+    public GameObject player;
+
     public Transform head;
 
     // for other stuff
@@ -73,6 +76,8 @@ public class CustumEnemyNPC : MonoBehaviour {
 
     public void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         // battle_theme = GetComponent<AudioSource>();
 
         is_collider_on = false;
@@ -125,7 +130,7 @@ public class CustumEnemyNPC : MonoBehaviour {
     }
     public void Update()
     {
-        Vector3 direction = player.position - this.transform.position;
+        Vector3 direction = player.transform.position - this.transform.position;
         direction.y = 0;
         float angle = Vector3.Angle(direction, head.up);
 
@@ -150,7 +155,7 @@ public class CustumEnemyNPC : MonoBehaviour {
             music_playing = false;
         }
         */
-        if (health == 0)
+        if (health <= 0)
         {
             _dead = true;
         }
@@ -181,7 +186,7 @@ public class CustumEnemyNPC : MonoBehaviour {
 
         // if (((Vector3.Distance(player.position, this.transform.position) < 15) && (_traveling || _waiting)) || (Physics.Raycast(transform.position, Vector3.forward, out hit, 300.0f))) {
         
-        else if ((Vector3.Distance(player.position, this.transform.position) < 15) && _dead == false)
+        else if ((Vector3.Distance(player.transform.position, this.transform.position) < 15) && _dead == false)
         {
             Debug.Log("Player Nearby");
 
@@ -193,7 +198,7 @@ public class CustumEnemyNPC : MonoBehaviour {
             _waiting = false;
 
             // speed up a little 
-            _navMeshAgent.speed = 4f;
+            _navMeshAgent.speed = perusing_speed;
 
             
             GameObject player_waypoint = GameObject.Find("PlayerWaypoint");
@@ -254,7 +259,7 @@ public class CustumEnemyNPC : MonoBehaviour {
                 SetPersue();
             }
         }
-        else if (((Vector3.Distance(player.position, this.transform.position) > 15)) && _dead == false)
+        else if (((Vector3.Distance(player.transform.position, this.transform.position) > 15)) && _dead == false)
         {
             // player is far away
             player_nearby = false;

@@ -41,14 +41,14 @@ public class keyZone : MonoBehaviour {
 
                 Instructions.GetComponent<Text>().text = "Find a key and press q to proceed";
 
-                if (Input.GetKey("q"))
+                if ((Input.GetKey("q")) && (other.GetComponent<HealthBar>().keys > 0))
                 {
                     // if they have enough keys use one
                     // open the door, if not tell them they need to find more keys
                     Trap_Collider.GetComponent<gateTrapScript>().Open();
                     Trap_Collider.GetComponent<gateTrapScript>().gate_open = true;
 
-
+                    other.GetComponent<HealthBar>().keys -= 1;
 
                     play_audio = true;
                     Open_Sound.Play();
@@ -75,5 +75,17 @@ public class keyZone : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         Instructions.GetComponent<Text>().text = "";
+
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name);
+        if (other.tag == "MysteryLight")
+        {
+
+            Destroy(other.gameObject);
+        }
     }
 }
