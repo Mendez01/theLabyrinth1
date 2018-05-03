@@ -63,6 +63,9 @@ public class HealthBar : MonoBehaviour {
 			Destroy (col.gameObject);
 			keys += 1;
 		}
+		if (col.tag == "Goal") {
+			anim.SetBool("IsWinning", true);
+		}
 
 	}
 
