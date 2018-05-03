@@ -5,7 +5,7 @@ using UnityEngine;
 public class MysteryLightScript : MonoBehaviour {
 
 
-    public float time_limit = 5;
+    private float time_limit = 13;
 
     float time_passed;
 
@@ -26,7 +26,7 @@ public class MysteryLightScript : MonoBehaviour {
 
         Debug.Log(time_passed);
         
-        if (time_passed > 5)
+        if (time_passed > time_limit)
         {
             Destroy(gameObject);
         }

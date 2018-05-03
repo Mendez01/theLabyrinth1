@@ -13,9 +13,12 @@ public class keyZone : MonoBehaviour {
 
     AudioSource Open_Sound;
 
+    public float key_requirements = 1f;
+
     void Start()
     {
         Open_Sound = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -39,16 +42,16 @@ public class keyZone : MonoBehaviour {
             {
                 // prompt on screen that they need key and press "q"
 
-                Instructions.GetComponent<Text>().text = "Find a key and press q to proceed";
+                Instructions.GetComponent<Text>().text = "Find " + key_requirements.ToString() + " key(s) and press q to proceed";
 
-                if ((Input.GetKey("q")) && (other.GetComponent<HealthBar>().keys > 0))
+                if ((Input.GetKey("q")) && (other.GetComponent<HealthBar>().keys >= key_requirements))
                 {
                     // if they have enough keys use one
                     // open the door, if not tell them they need to find more keys
                     Trap_Collider.GetComponent<gateTrapScript>().Open();
                     Trap_Collider.GetComponent<gateTrapScript>().gate_open = true;
 
-                    other.GetComponent<HealthBar>().keys -= 1;
+                    other.GetComponent<HealthBar>().keys -= key_requirements;
 
                     play_audio = true;
                     Open_Sound.Play();
