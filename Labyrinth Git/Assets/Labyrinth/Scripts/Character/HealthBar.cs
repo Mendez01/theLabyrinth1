@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour {
 	public Component cc;
@@ -58,10 +59,12 @@ public class HealthBar : MonoBehaviour {
 		if (col.tag == "Heal") {
 			Destroy (col.gameObject);
 			HealDamage (heal);
+            col.gameObject.GetComponent<AudioSource>().Play();
 		}
 		if (col.tag == "Key") {
 			Destroy (col.gameObject);
 			keys += 1;
+            col.gameObject.GetComponent<AudioSource>().Play();
 		}
 
 	}
@@ -82,7 +85,11 @@ public class HealthBar : MonoBehaviour {
 			hp = 0;
 			//Destroy(anim.gameObject);
 			anim.SetBool ("IsDead", true);
-		}
+            
+            Invoke("LoadStartGame", 5);
+
+            GameObject.Find("Instructions_Text").GetComponent<InstructionsScript>().GameOver();
+        }
 	}
 
 	private void HealDamage (float heal)
@@ -93,5 +100,8 @@ public class HealthBar : MonoBehaviour {
 		}
 	}
 
-	
+    private void LoadStartGame()
+    {
+        SceneManager.LoadScene("StartScreen");
+    }
 }

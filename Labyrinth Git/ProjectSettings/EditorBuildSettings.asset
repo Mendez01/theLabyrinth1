@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Prototype1.unity
-    guid: 1074946b7b140e54c98fb5dc0be24ef8
+  - enabled: 1
+    path: Assets/Labyrinth/Scenes/StartScreen.unity
+    guid: 07e27a09402107740a66747c1ae25590
+  - enabled: 1
+    path: Assets/FinalLabyrinth.unity
+    guid: 18d20efe6eb2fc7428fd6f17735ea939

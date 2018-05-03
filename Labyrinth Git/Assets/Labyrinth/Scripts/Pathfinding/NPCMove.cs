@@ -5,13 +5,15 @@ using UnityEngine.AI;
 
 public class NPCMove : MonoBehaviour {
 
-    [SerializeField]
-    Transform _destination;
+    GameObject _destination;
 
     NavMeshAgent _navMeshAgent;
 
 	// Use this for initialization
 	void Start () {
+
+        _destination = GameObject.Find("Goal");
+
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
 
         if (_navMeshAgent == null)
