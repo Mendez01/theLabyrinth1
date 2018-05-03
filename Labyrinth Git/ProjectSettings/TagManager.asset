@@ -21,6 +21,7 @@ TagManager:
   - Spider_Waypoint_3
   - MysteryLight
   - Weapon3
+  - Goal
   layers:
   - Default
   - TransparentFX

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InstructionsScript : MonoBehaviour {
 
@@ -16,10 +17,9 @@ public class InstructionsScript : MonoBehaviour {
 
         Invoke("Instructions1", 5);
 
-
     }
-	
-	void Instructions1()
+
+    void Instructions1()
     {
         Instructions_Text.text = "Use W, A, S, D keys to move (hold shift to run)";
         Invoke("Instructions2", 4);
@@ -44,5 +44,21 @@ public class InstructionsScript : MonoBehaviour {
     public void GameOver()
     {
         Instructions_Text.text = "You were taken by the labyrinth";
+    }
+    public void Win()
+    {
+        Instructions_Text.text = "You escaped the labyrinth!";
+        Invoke("ExitGame", 4);
+    }
+
+    public void ExitGame()
+    {
+        Instructions_Text.text = "Thanks For Playing!";
+        Invoke("CloseApp", 5);
+    }
+
+    public void CloseApp()
+    {
+        Application.Quit();
     }
 }

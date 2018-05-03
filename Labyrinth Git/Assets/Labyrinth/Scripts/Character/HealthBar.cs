@@ -66,6 +66,11 @@ public class HealthBar : MonoBehaviour {
 			keys += 1;
             col.gameObject.GetComponent<AudioSource>().Play();
 		}
+        if (col.tag == "Goal")
+        {
+            GameObject.Find("Instructions_Text").GetComponent<InstructionsScript>().Win();
+
+        }
 
 	}
 
