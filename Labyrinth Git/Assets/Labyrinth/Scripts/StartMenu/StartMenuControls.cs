@@ -8,7 +8,7 @@ public class StartMenuControls : MonoBehaviour {
     public void StartGame()
     {
 
-        SceneManager.LoadScene("FinalLabyrinth");
+        SceneManager.LoadScene("FinalLabyrinth 1");
         
     }
 }

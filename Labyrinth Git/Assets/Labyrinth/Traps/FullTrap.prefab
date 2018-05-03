@@ -22,11 +22,12 @@ GameObject:
   - component: {fileID: 33791639194540136}
   - component: {fileID: 23120059785545358}
   - component: {fileID: 65772874273697964}
+  - component: {fileID: 208632394505983130}
   m_Layer: 0
   m_Name: Gate_Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1355758415407062
@@ -391,6 +392,7 @@ MonoBehaviour:
   Trap_Collider: {fileID: 1965267975692192}
   Instructions: {fileID: 0}
   play_audio: 0
+  key_requirements: 1
 --- !u!114 &114872594240475896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -406,3 +408,18 @@ MonoBehaviour:
   gatefalltime: 5
   gateTrap: {fileID: 1257224766842950}
   keyZone: {fileID: 1355758415407062}
+--- !u!208 &208632394505983130
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257224766842950}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.545, y: 0.014, z: 1.7580001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 2.538, y: -0.001, z: 0.014}
+  m_TimeToStationary: 0.5

@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Labyrinth/Scenes/StartScreen.unity
     guid: 07e27a09402107740a66747c1ae25590
   - enabled: 1
-    path: Assets/FinalLabyrinth.unity
-    guid: 18d20efe6eb2fc7428fd6f17735ea939
+    path: Assets/FinalLabyrinth 1.unity
+    guid: 349b93e6ea5de3f4fac0e89b70cee63b

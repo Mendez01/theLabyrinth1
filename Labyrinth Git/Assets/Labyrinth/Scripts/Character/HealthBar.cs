@@ -12,8 +12,8 @@ public class HealthBar : MonoBehaviour {
 	private float hp = 100f;
 	private float Maxhp = 100f;
 	Animator anim;
-	public float damage1 = 6;
-	public float damage2 = 10;
+	public float damage1 = 1;
+	public float damage2 = 3;
 	public float damage3 = 5;
 	public float heal = 30;
 
@@ -68,6 +68,7 @@ public class HealthBar : MonoBehaviour {
 		}
         if (col.tag == "Goal")
         {
+            anim.SetBool("IsWinning", true);
             GameObject.Find("Instructions_Text").GetComponent<InstructionsScript>().Win();
 
         }

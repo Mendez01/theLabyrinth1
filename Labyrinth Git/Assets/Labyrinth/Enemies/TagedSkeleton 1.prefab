@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 65632435340029740}
   m_Layer: 0
   m_Name: Sword_09:Sword_09
-  m_TagString: Weapon
+  m_TagString: Weapon2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2282,7 +2282,7 @@ MonoBehaviour:
   head: {fileID: 4051720103084168}
   _dead: 0
   SpawnOnDeadItems:
-  - {fileID: 0}
+  - {fileID: 1839810894769536, guid: b8aab4acb9f53d34db781e9cd4a83dc3, type: 2}
   - {fileID: 1217577741362550, guid: 105da9ba5feb4f84a9e6f0dc534d2cec, type: 2}
   - {fileID: 1750474132082820, guid: 228a7e58083db9042bb98aa308654194, type: 2}
   Weapons_Damage_Area: {fileID: 1672049287515606}
