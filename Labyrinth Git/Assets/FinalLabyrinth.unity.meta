@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 18d20efe6eb2fc7428fd6f17735ea939
+<<<<<<< HEAD
 timeCreated: 1525450173
+=======
+timeCreated: 1522953275
+>>>>>>> parent of bb92989... Merge branch 'master' of https://github.com/Mendez01/theLabyrinth1
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
